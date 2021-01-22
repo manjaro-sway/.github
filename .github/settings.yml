@@ -1,0 +1,32 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+repository:
+  topics: package, arch
+  private: false
+  has_issues: false
+  has_projects: false
+  has_wiki: false
+  has_downloads: false
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+  enable_automated_security_fixes: true
+  delete_branch_on_merge: true
+
+teams:
+  - name: maintainers
+    permission: admin
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+  - name: main
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+  - name: dev
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
